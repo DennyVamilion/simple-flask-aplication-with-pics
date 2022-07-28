@@ -1,0 +1,28 @@
+<html lang="DE">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='Kontakte.css') }}">
+    <title>Kontakte</title>
+</head>
+<body>
+    <nav class="nav">
+        <label class="logo">Vectrum</label>
+    <ul>
+        <li><a href="{{ url_for('Home') }}">Home</a></li>
+        <li><a href="#">Projekte</a></li>
+        <li><a href="{{ url_for('Kontakte') }}">Kontakte</a></li>
+        <li><a href="#">Über uns</a></li>
+    </ul>
+    </nav>
+    <nav id="h"><h1>Kontakte</h1></nav>
+
+    <nav class="icons">
+    <a href="#"><img src="{{ user_imge1 }}" alt="" id="i1"><h1>Discord</h1></a><br>
+    <a href="#"><img src="{{ user_imge2 }}" alt="" id="i2"><h1>Instagram</h1></a><br>
+    <a href="#"><img src="{{ user_imge3 }}" alt="" id="i3"><h1>Twitch</h1></a><br>
+    <a href="#"><img src="{{ user_imge4 }}" alt="" id="i4"><h1>You Tube</h1></a><br>
+    </nav>
+</body>
+</html>

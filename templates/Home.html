@@ -1,0 +1,76 @@
+<html lang="DE">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    
+    <title>Home</title>
+</head>
+<body>
+    <nav>
+        <label class="logo">Vectrum</label>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Projekte</a></li>
+        <li><a href="{{ url_for('Kontakte') }}">Kontakte</a></li>
+        <li><a href="#">Über uns</a></li>
+    </ul>
+    </nav>
+
+  <div class="container">
+    <!-- Slider main container -->
+<div class="swiper">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper">
+    <!-- Slides -->
+    <div class="swiper-slide"><a href="#"><img src="{{user_image3}}" alt="ERROR MISSING JAVASCRIPT"></a></div>
+    <div class="swiper-slide"><a href="#"><img src="{{user_image2}}" alt="ERROR MISSING JAVASCRIPT"></a></div>
+    <div class="swiper-slide"><a href="#"><img src="{{user_image1}}" alt="ERROR MISSING JAVASCRIPT"></a></div>
+  </div>
+  <!-- If we need pagination -->
+  <div class="swiper-pagination"></div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+  </div>
+  </div>
+  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+<script>
+  const swiper = new Swiper('.swiper', {
+  
+    autoplay:{
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+});
+</script>
+
+<div class="end">
+  <ul>
+  <a href="#"><p>Impressum</p></a>
+  <a href="#"><p>Datenschutz</p></a>
+  <a href="#"><p>AGB</p></a>
+  </ul>
+</div>
+
+
+</body>
+</html>
